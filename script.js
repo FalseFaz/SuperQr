@@ -2,7 +2,10 @@ const { ipcRenderer } = require("electron");
 
 const url = document.querySelector("#url");
 const generateBtn = document.querySelector("#generateBtn");
+const background = document.querySelector("#background");
+const dots = document.querySelector("#dots");
 const downloadBtn = document.querySelector("#downloadBtn");
+
 const qrcode = document.querySelector("#qrcode");
 const notificationBanner = document.querySelector("#notificationBanner");
 
@@ -18,7 +21,14 @@ function showCopiedBanner(text, time) {
 }
 
 generateBtn.addEventListener("click", () => {
-    if (url.value !== "") ipcRenderer.send("generateQRCode", url.value);
+    const options = {
+        color: {
+            dark: dots.value, // dots
+            light: background.value, // background
+        },
+    };
+
+    if (url.value !== "") ipcRenderer.send("generateQRCode", url.value, options);
 });
 
 downloadBtn.addEventListener("click", () => {

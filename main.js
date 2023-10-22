@@ -35,9 +35,9 @@ app.on("window-all-closed", () => {
     if (process.platform !== "darwin") app.quit();
 });
 
-ipcMain.on("generateQRCode", async (event, url) => {
+ipcMain.on("generateQRCode", async (event, url, options) => {
     try {
-        const imageData = await QRCode.toDataURL(url);
+        const imageData = await QRCode.toDataURL(url, options);
         event.reply("showQRCode", imageData);
     } catch (error) {
         console.error(error);

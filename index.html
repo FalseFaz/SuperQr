@@ -13,6 +13,16 @@
         <div id="notificationBanner"></div>
         <h2 id="title">QR Code Generator</h2>
         <input type="text" id="url" placeholder="URL or Text">
+        <div id="colors">
+            <div id="background-line" class="color-line">
+                <label for="background" class="lable" id="background-lable">Background Color</label>
+                <input type="color" class="color" name="background" id="background" value="#ffffff">
+            </div>
+            <div id="dots-line" class="color-line">
+                <label for="dots" class="lable" id="dots-lable">Dots Color</label>
+                <input type="color" class="color" name="dots" id="dots" value="#000000">
+            </div>
+        </div>
         <div id="btns">
             <button id="generateBtn">Generate QR Code</button>
             <button id="downloadBtn">Download QR Code</button>
