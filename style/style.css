@@ -1,0 +1,67 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+#container #notificationBanner {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1;
+}
+#container #title {
+  margin-bottom: 20px;
+}
+#container #url {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+#container #btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20;
+}
+#container #btns #generateBtn, #container #btns #downloadBtn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #4caf50;
+  cursor: pointer;
+}
+#container #btns #downloadBtn {
+  display: none;
+}
+#container #qrcode #qrimg {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+{
+    "name": "super-qr",
+    "version": "1.0.0",
+    "description": "qrcode generator",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "build": {
+        "appId": "com.superqr.app",
+        "productName": "SuperQr",
+        "directories": {
+            "output": "dist"
+        }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^27.0.2",
+        "electron-builder": "^24.6.4"
+    },
+    "dependencies": {
+        "qrcode": "^1.5.3"
+    }
+}

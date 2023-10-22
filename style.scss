@@ -1,0 +1,80 @@
+$btnColor: #4caf50;
+$textColor_dark: black;
+$textColor_light: white;
+$backgroundColor: white;
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $backgroundColor;
+
+    #notificationBanner {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $btnColor;
+        color: $textColor_light;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    #title {
+        margin-bottom: 20px;
+    }
+
+    #url {
+        width: 300px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    #btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20;
+
+        #generateBtn {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: $textColor_light;
+            background-color: $btnColor;
+            cursor: pointer;
+        }
+
+        #downloadBtn {
+            @extend #generateBtn;
+            display: none;
+        }
+    }
+
+    #qrcode {
+        #qrimg {
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+}
